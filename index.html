@@ -1,32 +1,65 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script>
-		setInterval(()=>{
-          d=new Date();
-          hours=d.getHours();
-          minutes=d.getMinutes();
-          seconds=d.getSeconds();
-
-          hr=30*hours+minutes*0.5;
-          mr=6*minutes;
-          sr=6*seconds;
-
-          h.style.transform=`rotate(${hr}deg)`;
-          min.style.transform=`rotate(${mr}deg)`;
-          sec.style.transform=`rotate(${sr}deg)`;
-
-		},1000)
-	</script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&display=swap" rel="stylesheet">
 </head>
+
 <body>
-	<img src="clk1.png" align="center">
-	<div id="dot"></div>
-	<div id="h"></div>
-	<div id="min"></div>
-	<div id="sec"></div>
+	<video autoplay loop muted plays-inline class="background-clip">
+		<source src="back1.mp4" type="video/mp4">
+	</video>
+	<div class="dial">
+		<div class="dot"></div>
+		<div class="hour h1">1</div>
+		<div class="hour h2">2</div>
+		<div class="hour h3">3</div>
+		<div class="hour h4">4</div>
+		<div class="hour h5">5</div>
+		<div class="hour h6">6</div>
+		<div class="hour h7">7</div>
+		<div class="hour h8">8</div>
+		<div class="hour h9">9</div>
+		<div class="hour h10">10</div>
+		<div class="hour h11">11</div>
+		<div class="hour h12">12</div>
+		<div class="name">_SAMIII_</div>
+
+		<div class="min-hand-wrapper" id="min-hand">
+			<div class="min-hand">
+				<div class="hand"></div>
+			</div>
+		</div>
+		<div class="hr-hand-wrapper" id="hr-hand">
+			<div class="hr-hand">
+				<div class="hand"></div>
+			</div>
+		</div>
+		<div class="sec-hand-wrapper" id="sec-hand">
+			<div class="sec-hand">
+				<div class="hand"></div>
+			</div>
+		</div>
+	</div>
+	<script>
+		var second = 0;
+		var minute = 0;
+		var hour = 0;
+		setInterval(() => {
+			d = new Date();
+			hour = d.getHours() * 30 + Math.round(minute / 12);
+			minute = d.getMinutes() * 6;
+			second = d.getSeconds() * 6;
+			document.getElementById("sec-hand").style.transform = "rotate(" + second + "deg)";
+			document.getElementById("hr-hand").style.transform = "rotate(" + hour + "deg)";
+			document.getElementById("min-hand").style.transform = "rotate(" + minute + "deg)";
+		}, 1000)
+	</script>
 </body>
+
 </html>
