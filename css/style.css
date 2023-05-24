@@ -1,40 +1,184 @@
-#h{
-	position: absolute;
-	top: 23%;
-	left: 26%;
-	width: 1%;
-	height: 15.2%;
-	background-color: #2b60de;
-	border-radius: 10px;
-	transform-origin: bottom;
-	margin: 55px 275px;
+body {
+
+	background: rgb(0, 0, 0);
+	font-family: 'Comfortaa', cursive;
 }
-#min{
-	position: absolute;
-	top: 20%;
-	left: 24.7%;
-	width: .75%;
-	height:20%;
-	background-color: #b041ff ;
-	border-radius: 5px;
-	transform-origin: bottom;
-	margin: 50px 275px;
+
+.dial {
+	width: 500px;
+	height: 500px;
+	border: 5px solid rgb(255, 255, 255);
+	border-radius: 50%;
+	margin: 100px auto;
+	position: relative;
+	background: rgba(0, 0, 0, 0.774);
 }
-#sec{
-	position: absolute;
-	top: 19.4%;
-	left: 25.6%;
-	width: .25%;
-	height: 21.4%;
+
+.dot {
+	width: 10px;
+	height: 10px;
 	background-color: white;
-	border-radius: 10px;
-	transform-origin: bottom;
-	margin: 50px 275px;
+	border-radius: 50%;
+	position: absolute;
+	top: 245px;
+	left: 245px;
 }
-img{
-	height: 30vw;
-	margin: 100px 410px;
+
+.hour {
+	color: aliceblue;
+	font-size: 17px;
+	position: absolute;
 }
-body{
-	background-color: black;
+
+.h1 {
+	top: 40px;
+	right: 130px;
+}
+
+.h2 {
+	top: 125px;
+	right: 45px;
+}
+
+.h3 {
+	top: 235px;
+	right: 10px;
+}
+
+.h4 {
+	top: 345px;
+	right: 45px;
+}
+
+.h5 {
+	top: 430px;
+	right: 130px;
+}
+
+.h6 {
+	bottom: 10px;
+	left: 247px;
+}
+
+.h7 {
+	top: 430px;
+	left: 130px;
+}
+
+.h8 {
+	top: 345px;
+	left: 45px;
+}
+
+.h9 {
+	top: 235px;
+	left: 10px;
+}
+
+.h10 {
+	top: 125px;
+	left: 45px;
+}
+
+.h11 {
+	top: 40px;
+	left: 130px;
+}
+
+.h12 {
+	top: 10px;
+	left: 247px;
+}
+
+.name {
+	color: white;
+	letter-spacing: 5px;
+	position: absolute;
+	top: 80px;
+	left: 42%;
+}
+
+.min-hand-wrapper {
+	width: 400px;
+	height: 400px;
+	position: absolute;
+	top: 50px;
+	left: 50px;
+	border-radius: 50%;
+}
+
+.min-hand {
+	position: relative;
+}
+
+.min-hand .hand {
+	width: 5px;
+	height: 200px;
+	background-color: #fff;
+	position: absolute;
+	left: 198px;
+}
+
+.hr-hand-wrapper {
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 100px;
+	left: 100px;
+	border-radius: 50%;
+}
+
+.hr-hand {
+	position: relative;
+}
+
+.hr-hand .hand {
+	width: 4px;
+	height: 150px;
+	background-color: #ffffff;
+	position: absolute;
+	left: 148px;
+}
+
+.sec-hand-wrapper {
+	width: 350px;
+	height: 350px;
+	position: absolute;
+	top: 75px;
+	left: 75px;
+	border-radius: 50%;
+}
+
+.sec-hand {
+	position: relative;
+}
+
+.sec-hand .hand {
+	width: 2px;
+	height: 175px;
+	background-color: #ffffff;
+	position: absolute;
+	left: 174px;
+}
+
+.background-clip {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+	filter: blur(5px);
+}
+
+@media (min-aspect-ratio:16/9) {
+	.background-clip {
+		width: 100%;
+		height: auto;
+	}
+}
+
+@media (max-aspect-ratio:16/9) {
+	.background-clip {
+		width: auto;
+		height: 100%;
+	}
 }
